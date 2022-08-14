@@ -24,7 +24,7 @@ tasks.withType(JavaCompile) {
 }
 
 application {
-    mainClass = 'com.alextheracer1.austriasnexttaxidriverclient.HelloApplication'
+    mainClass = 'com.alextheracer1.austriasnexttaxidriverclient.AustriasNextTaxiDriverClient'
 }
 
 javafx {
