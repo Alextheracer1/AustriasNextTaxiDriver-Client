@@ -13,33 +13,21 @@ import javafx.scene.control.TextField;
 
 public class NewRunController implements Initializable {
 
-
-  @FXML
-  public Button newRunButton;
+  @FXML public Button newRunButton;
 
   // Driver Section
-  @FXML
-  public TextField driverDeathCauseTextField;
-  @FXML
-  public CheckBox isAiDriverCheckBox;
+  @FXML public TextField driverDeathCauseTextField;
+  @FXML public CheckBox isAiDriverCheckBox;
 
   // Taxi Run Section
-  @FXML
-  public TextField videoURLTextField;
-  @FXML
-  public TextField reasonForEliminationTextField;
-  @FXML
-  public TextField reasonForEliminationDetailsTextField;
-  @FXML
-  public TextField weatherConditionTextField;
-  @FXML
-  public TextField timeOfDayTextField;
-  @FXML
-  public ChoiceBox directionChoiceBox;
-  @FXML
-  public ChoiceBox reasonForEliminationChoiceBox;
-  @FXML
-  public ChoiceBox dayLightChoiceBox;
+  @FXML public TextField videoURLTextField;
+  @FXML public TextField reasonForEliminationTextField;
+  @FXML public TextField reasonForEliminationDetailsTextField;
+  @FXML public TextField weatherConditionTextField;
+  @FXML public TextField timeOfDayTextField;
+  @FXML public ChoiceBox directionChoiceBox;
+  @FXML public ChoiceBox reasonForEliminationChoiceBox;
+  @FXML public ChoiceBox dayLightChoiceBox;
 
   public void addRun() {
     System.out.println("New run added");
@@ -59,7 +47,8 @@ public class NewRunController implements Initializable {
     reasonForEliminationList.add("Trench");
     reasonForEliminationList.add("End");
     reasonForEliminationList.add("Other");
-    reasonForEliminationChoiceBox.setItems(FXCollections.observableArrayList(reasonForEliminationList));
+    reasonForEliminationChoiceBox.setItems(
+        FXCollections.observableArrayList(reasonForEliminationList));
 
     ArrayList<String> dayLightList = new ArrayList<>();
     dayLightList.add("Day");
@@ -67,6 +56,5 @@ public class NewRunController implements Initializable {
     dayLightList.add("Day -> Night");
     dayLightList.add("Night -> Day");
     dayLightChoiceBox.setItems(FXCollections.observableArrayList(dayLightList));
-
   }
 }

@@ -5,7 +5,6 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,8 +14,7 @@ import javafx.stage.Stage;
 
 public class StartController implements Initializable {
 
-  @FXML
-  private Button newRunButton;
+  @FXML private Button newRunButton;
   private Button allRunsButton;
 
   private Boolean alreadyOpen;
@@ -42,9 +40,10 @@ public class StartController implements Initializable {
         stage.setScene(scene);
         stage.setResizable(false);
         alreadyOpen = true;
-        stage.setOnHidden(e -> {
-          closeNewRunWindow();
-        });
+        stage.setOnHidden(
+            e -> {
+              closeNewRunWindow();
+            });
         stage.show();
       } catch (IOException e) {
         Logger logger = Logger.getLogger(getClass().getName());
@@ -53,11 +52,12 @@ public class StartController implements Initializable {
     } else {
       System.out.println("Window is already open");
     }
+  }
 
-  }
   public void onButtonNewRun() {
-   openNewWindow("newRun.fxml");
+    openNewWindow("newRun.fxml");
   }
+
   private void closeNewRunWindow() {
     alreadyOpen = false;
   }
@@ -65,5 +65,4 @@ public class StartController implements Initializable {
   public void onButtonAllRuns() {
     openNewWindow("allRuns.fxml");
   }
-
 }

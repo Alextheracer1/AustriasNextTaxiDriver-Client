@@ -1,6 +1,5 @@
 package com.alextheracer1.austriasnexttaxidriverclient;
 
-import static java.lang.invoke.VarHandle.AccessMode.GET;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -17,17 +16,17 @@ import javafx.scene.control.ListView;
 
 public class AllRunsController implements Initializable {
 
-  @FXML
-  public Label countLabel;
-  @FXML
-  public ListView<String> runsView;
+  @FXML public Label countLabel;
+  @FXML public ListView<String> runsView;
 
   private final String apiUrl = "http://localhost:8080/api/getAllTaxiRuns";
 
-
   @Override
   public void initialize(URL location, ResourceBundle resources) {
-    countLabel.setText("There are currently " + UrlRequest("http://localhost:8080/api/getAllTaxiRunsCount") + " Runs");
+    countLabel.setText(
+        "There are currently "
+            + UrlRequest("http://localhost:8080/api/getAllTaxiRunsCount")
+            + " Runs");
     runsView.getItems().addAll(UrlRequest(apiUrl));
   }
 
@@ -50,8 +49,7 @@ public class AllRunsController implements Initializable {
     } catch (ProtocolException e) {
       throw new RuntimeException(e);
     }
-    try (BufferedReader reader = new BufferedReader(
-        new InputStreamReader(conn.getInputStream()))) {
+    try (BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()))) {
       for (String line; (line = reader.readLine()) != null; ) {
         result.append(line);
       }
@@ -60,5 +58,4 @@ public class AllRunsController implements Initializable {
     }
     return result.toString();
   }
-
 }
