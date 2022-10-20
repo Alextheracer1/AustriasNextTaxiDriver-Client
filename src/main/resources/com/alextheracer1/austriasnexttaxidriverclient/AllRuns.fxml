@@ -43,12 +43,12 @@
       <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="722.0" prefWidth="1281.0">
          <children>
             <ListView fx:id="runsView" layoutX="60.0" layoutY="122.0" prefHeight="586.0" prefWidth="1173.0" />
-            <Label layoutX="387.0" layoutY="25.0" prefHeight="71.0" prefWidth="507.0" text="All Runs in the Database">
+            <Label layoutX="387.0" layoutY="25.0" prefHeight="71.0" prefWidth="599.0" text="All Runs in the Database">
                <font>
                   <Font size="46.0" />
                </font>
             </Label>
-            <Label fx:id="countLabel" layoutX="529.0" layoutY="96.0" prefHeight="27.0" prefWidth="234.0" text="There are currently 0 Runs">
+            <Label fx:id="countLabel" layoutX="529.0" layoutY="96.0" prefHeight="27.0" prefWidth="270.0" text="There are currently 0 Runs">
                <font>
                   <Font size="18.0" />
                </font>

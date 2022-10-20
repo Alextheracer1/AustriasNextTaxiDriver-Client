@@ -55,7 +55,7 @@ public class StartController implements Initializable {
   }
 
   public void onButtonNewRun() {
-    openNewWindow("newRun.fxml");
+    openNewWindow("NewRun.fxml");
   }
 
   private void closeNewRunWindow() {
@@ -63,6 +63,6 @@ public class StartController implements Initializable {
   }
 
   public void onButtonAllRuns() {
-    openNewWindow("allRuns.fxml");
+    openNewWindow("AllRuns.fxml");
   }
 }

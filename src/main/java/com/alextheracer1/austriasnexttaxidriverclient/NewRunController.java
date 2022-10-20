@@ -25,9 +25,9 @@ public class NewRunController implements Initializable {
   @FXML public TextField reasonForEliminationDetailsTextField;
   @FXML public TextField weatherConditionTextField;
   @FXML public TextField timeOfDayTextField;
-  @FXML public ChoiceBox directionChoiceBox;
-  @FXML public ChoiceBox reasonForEliminationChoiceBox;
-  @FXML public ChoiceBox dayLightChoiceBox;
+  @FXML public ChoiceBox<String> directionChoiceBox;
+ // @FXML public ChoiceBox<String> reasonForEliminationChoiceBox;
+ // @FXML public ChoiceBox<String> dayLightChoiceBox;
 
   public void addRun() {
     System.out.println("New run added");
@@ -40,15 +40,14 @@ public class NewRunController implements Initializable {
     directionList.add("Made it both ways");
     directionList.add("Made it back to the start");
     directionChoiceBox.setItems(FXCollections.observableArrayList(directionList));
-
+/*
     ArrayList<String> reasonForEliminationList = new ArrayList<>();
     reasonForEliminationList.add("Roll over");
     reasonForEliminationList.add("Turn");
     reasonForEliminationList.add("Trench");
     reasonForEliminationList.add("End");
     reasonForEliminationList.add("Other");
-    reasonForEliminationChoiceBox.setItems(
-        FXCollections.observableArrayList(reasonForEliminationList));
+    reasonForEliminationChoiceBox.setItems(FXCollections.observableArrayList(reasonForEliminationList));
 
     ArrayList<String> dayLightList = new ArrayList<>();
     dayLightList.add("Day");
@@ -56,5 +55,7 @@ public class NewRunController implements Initializable {
     dayLightList.add("Day -> Night");
     dayLightList.add("Night -> Day");
     dayLightChoiceBox.setItems(FXCollections.observableArrayList(dayLightList));
+
+ */
   }
 }
